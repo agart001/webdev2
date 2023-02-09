@@ -6,11 +6,19 @@
     --light-red: #FF6B6C;
 }
 
+
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
+
 *{
     margin: 0 auto;
     padding: 0;
     width: auto;
 }
+
+h1, h2, p, a{
+    font-family: 'Patua One', cursive;
+}
+
 
 body{
     min-width: 50rem;
@@ -20,6 +28,21 @@ header{
     height: 20%;
     background-color: var(--light-red);
     border: .25rem solid var(--ultra-violet);
+
+    text-align: center;
+}
+
+header h1, header h2{
+    color: var(--xanthous-)
+}
+
+header h1{
+    margin-top: 1.5rem;
+    font-size: 3rem;
+}
+
+header h2{
+    margin-top: .25rem;
 }
 
 main{
@@ -34,6 +57,15 @@ footer{
     height: 10%;
     background-color: var(--xanthous-);
     border: .25rem solid var(--ultra-violet);
+
+    text-align: center;
+}
+
+footer h2{
+    margin-top: 1rem;
+    font-size: 2rem;
+
+    color: var(--light-red);
 }
 
 nav{
@@ -49,23 +81,57 @@ nav ul, nav li{
 }
 
 nav ul{
+    list-style: none;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     flex-wrap: wrap;
 
-    margin-top: 4rem;
-    margin-left: 4rem;
+    margin-top: 5%;
+    margin-left: 15%;
 }
 
 nav li{
-    margin-top: .25rem;
-    margin-bottom: .25rem;
+    font-size: 1rem auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 
 #content{
+    display: flex;
+    flex-flow: row;
     width: 75%;
     height: 100%;
     background-color: var(--baby-powder);
+    text-align: left;
+}
+
+#content div{
+    width: 50%;
+    margin-top: 2rem;
+    margin-left: 2rem;
+
+}
+
+#content div p{
+    margin-top: .5rem;
+    margin-left: 1.5rem;
+    text-indent: 1.5rem;
+    line-height: 1.5rem;
+}
+
+figure{
+    margin: 0 auto;
+    display: block;
+}
+
+figure img{
+    width: 100%;
+    max-height: 75%;
+
+    margin-top: 4rem;
+
+    border: .25rem solid var(--ultra-violet);
 }

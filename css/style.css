@@ -122,8 +122,14 @@ nav a:visited{
 
 }
 
+#content div h2{
+    font-size: 2rem;
+}
+
 #content div p{
-    margin-top: 1.5rem;
+    font-size: 1.25rem;
+
+    margin-top: .75rem;
     margin-left: 1.5rem;
     text-indent: 1.5rem;
     line-height: 1.5rem;

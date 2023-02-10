@@ -102,6 +102,8 @@ nav button:hover{
 
     background-color: var(--baby-powder);
 
+    color: var(--xanthous-);
+
     border: .2rem solid var(--light-red);
 }
 

@@ -93,7 +93,16 @@ nav ul{
     line-height: 2rem;
 }
 
-nav li{
+nav a{
+    color: var(--ultra-violet);
+}
+
+nav a:hover{
+    color: var(--baby-powder)
+}
+
+nav a:visited{
+    color: var(--light-red);
 }
 
 

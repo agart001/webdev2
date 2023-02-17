@@ -18,7 +18,6 @@
 header{
     background-color: var(--poly-green);
     height: auto;
-    border: .2rem solid red;
     text-align: center;
     display: flex;
     flex-flow: column;
@@ -30,8 +29,8 @@ header h1{
 
 footer{
     background-color: var(--poly-green);
+    padding: .5rem;
     height: 15%;
-    border: .2rem solid yellow;
     text-align: center;
 }
 
@@ -44,7 +43,6 @@ main{
     height: auto;
     display: flex;
     flex-flow: column;
-    border: .2rem solid green;
 }
 
 figure{
@@ -75,7 +73,10 @@ figure img{
 header nav{
     background-color: var(--sea-green);
 
-    border: .2rem solid purple;
+    border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
+
+    padding: .5rem;
     margin-top: 1rem;
     height: auto;
     width: auto;
@@ -119,6 +120,10 @@ header #drop:hover #drop-content{
     display: block;
 }
 
+header #drop-content button:hover{
+    background-color: whitesmoke;
+}
+
 
 main section{
     background-color: var(--tea-green);
@@ -127,7 +132,6 @@ main section{
     align-items: center;
     gap: 1rem;
     height: 40%;
-    border: .2rem solid yellowgreen;
 }
 
 main section div{
@@ -142,6 +146,7 @@ main section p{
 }
 
 main section figure{
+    border: .1rem solid black;
     margin-bottom: 1rem;
     height: auto;
     width: 85%;
@@ -149,8 +154,11 @@ main section figure{
 
 main nav{
     background-color: var(--sea-green);
+
+    border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
+
     height: auto;
-    border: .2rem solid purple;
 }
 
 ul{
@@ -162,9 +170,6 @@ ul{
     row-gap: 1rem;
 }
 
-li{
-    border: .2rem solid aqua;
-}
 
 #a-section {
     display: block;
@@ -176,30 +181,27 @@ li{
 a section{
     background-color: var(--uranian-blue);
 
+    border: .1rem solid black;
+
     height: auto;
-    border: .2rem solid blue;
     display: flex;
     flex-flow: column;
     align-items: center;
     gap: 1rem;
 }
 
-section div{
-    border: .2rem solid violet;
-    color: black;
-}
 
 a section div{
+    color: black;
     margin-top: 1rem;
     height: auto;
     width: 85%;
 }
 
-figure{
-    border: .2rem solid orange;
-}
 
 a section figure{
+    border: .1rem solid black;
+
     margin-bottom: 1rem;
     height: auto;
     width: 85%;
@@ -217,6 +219,7 @@ a section figure{
     header button{
         height: 4rem;
         width: 6rem;
+        font-size: 1rem;
     }
 
     main section figure{

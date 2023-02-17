@@ -3,16 +3,20 @@
     margin: 0;
     padding: 0;
     width: auto;
+    text-decoration: none;
 }
 
+
 header{
-    height: 20%;
+    height: auto;
     border: .2rem solid red;
     text-align: center;
+    display: flex;
+    flex-flow: column;
 }
 
 header h1{
-    margin: 1.75rem 0;
+    margin: 1.5rem 0;
 }
 
 footer{
@@ -44,6 +48,48 @@ figure img{
     height: auto;
 }
 
+.mobile{
+    color: red;
+    visibility: visible;
+    width: auto;
+    height: auto;
+}
+
+.desktop{
+    color: blue;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+header nav{
+    border: .2rem solid purple;
+    margin-top: 1rem;
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+header button{
+    height: 2rem;
+    width: 4rem;
+}
+
+header #drop{
+    overflow: hidden;
+}
+
+header #drop-content
+{
+    display: none;
+}
+
+header #drop:hover #drop-content{
+    display: block;
+}
+
 main section{
     display: flex;
     flex-flow: column;
@@ -66,6 +112,7 @@ main section p{
 
 main section figure{
     margin-bottom: 1rem;
+    height: auto;
     width: 85%;
 }
 
@@ -79,24 +126,23 @@ ul{
     display: flex;
     flex-flow: column;
     align-items: center;
+    margin: 1rem 0;
+    row-gap: 1rem;
 }
 
 li{
     border: .2rem solid aqua;
-    width: 100%;
-    height: 30rem;
-    margin: .5rem 0;
 }
 
 #a-section {
     display: block;
     height: 100%;
     width: 100%;
-    text-decoration: none;
+    color: inherit;
 }
 
 a section{
-    height: 100%;
+    height: auto;
     border: .2rem solid blue;
     display: flex;
     flex-flow: column;
@@ -106,11 +152,12 @@ a section{
 
 section div{
     border: .2rem solid violet;
+    color: black;
 }
 
 a section div{
     margin-top: 1rem;
-    height: 25%;
+    height: auto;
     width: 85%;
 }
 
@@ -120,6 +167,7 @@ figure{
 
 a section figure{
     margin-bottom: 1rem;
+    height: auto;
     width: 85%;
 }
 
@@ -132,9 +180,6 @@ a section figure{
 /*tablet*/
 @media all and (min-width: 481px) {
 
-    main section{
-        flex-flow: row;
-    }
 
     main section figure{
         height: 50%;
@@ -146,7 +191,6 @@ a section figure{
     }
 
     li{
-        height: 20rem;
         width: 30%;
         margin: 1rem 0;
     }
@@ -159,16 +203,19 @@ a section figure{
 /*laptop*/
 @media all and (min-width: 769px) {
 
-    header{
-        height: 30%;
+    .mobile{
+        visibility: hidden;
+        height: 0;
+        width: 0;
     }
 
-    footer{
-        height: 25%;
+    .desktop{
+        visibility: visible;
+        height: auto;
+        width: auto;
     }
 
     li{
-        height: 40rem;
         width: 40%;
         margin: 2rem 0;
     }
@@ -180,7 +227,6 @@ a section figure{
 /*desktop*/
 @media all and (min-width: 1024px) {
     li{
-        height: 50rem;
         width: 45%;
         margin: 4rem 0;
     }

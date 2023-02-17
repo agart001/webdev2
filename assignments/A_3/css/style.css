@@ -15,6 +15,7 @@
 }
 
 
+
 header{
     background-color: var(--poly-green);
     height: auto;
@@ -29,9 +30,11 @@ header h1{
 
 footer{
     background-color: var(--poly-green);
+
     padding: .5rem;
-    height: 15%;
+    height: auto;
     text-align: center;
+    
 }
 
 footer h1{
@@ -43,6 +46,9 @@ main{
     height: auto;
     display: flex;
     flex-flow: column;
+
+    border-top: .1rem solid black;
+    border-bottom: .1rem solid black;
 }
 
 figure{
@@ -74,7 +80,6 @@ header nav{
     background-color: var(--sea-green);
 
     border-top: .1rem solid black;
-    border-bottom: .1rem solid black;
 
     padding: .5rem;
     margin-top: 1rem;
@@ -155,9 +160,6 @@ main section figure{
 main nav{
     background-color: var(--sea-green);
 
-    border-top: .1rem solid black;
-    border-bottom: .1rem solid black;
-
     height: auto;
 }
 
@@ -222,9 +224,6 @@ a section figure{
         font-size: 1rem;
     }
 
-    main section figure{
-        height: 50%;
-    }
     ul{
         flex-flow: row;
         flex-wrap: wrap;
@@ -232,7 +231,7 @@ a section figure{
     }
 
     li{
-        width: 30%;
+        width: 35%;
         margin: 1rem 0;
     }
 	

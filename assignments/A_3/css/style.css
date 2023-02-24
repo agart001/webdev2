@@ -55,6 +55,7 @@ main{
 figure{
     display: block;
     height: auto;
+    max-width: 30rem;
 }
 
 figure img{
@@ -64,14 +65,12 @@ figure img{
 }
 
 .mobile{
-    color: red;
     visibility: visible;
     width: auto;
     height: auto;
 }
 
 .desktop{
-    color: blue;
     visibility: hidden;
     width: 0;
     height: 0;
@@ -146,14 +145,25 @@ main section div{
     width: 85%
 }
 
+main > section > div > h1{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
+main > section > div > p{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+}
+
 main section p{
+    max-width: 40rem;
     margin-left: 1rem;
     text-indent: 1rem;
 }
 
 main section figure{
     border: .1rem solid black;
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     height: auto;
     width: 85%;
 }
@@ -201,6 +211,11 @@ a section div{
     width: 85%;
 }
 
+a section div h1{
+    text-align: center;
+    margin-bottom: .5rem;
+}
+
 
 a section figure{
     border: .1rem solid black;
@@ -235,6 +250,10 @@ a section figure{
         width: 35%;
         margin: 1rem 0;
     }
+
+    a > section > figure{
+        margin-bottom: 1.5rem;
+    }
 	
 	
 }
@@ -243,6 +262,15 @@ a section figure{
 
 /*laptop*/
 @media all and (min-width: 769px) {
+    main > section > div > h1{
+        text-align: left;
+    }
+
+    main > section{
+        gap: 2rem;
+        padding: 0 2rem;
+        flex-flow: row;
+    }
 
     .mobile{
         visibility: hidden;
@@ -260,6 +288,10 @@ a section figure{
     li{
         width: 40%;
         margin: 2rem 0;
+    }
+
+    a > section > figure{
+        margin-bottom: 2rem;
     }
 
 }

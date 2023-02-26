@@ -134,9 +134,10 @@
     border-radius: 4px;
   }
   
-  .contact input[type="submit"] {
+  .contact button{
+    width: 100%;
     background-color: #333;
-    color: #fff;
+    color: red;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
@@ -149,6 +150,15 @@
     padding: 10px;
     text-align: center;
   }
+
+  #page-container{
+  }
+
+  .anim{
+    transform-origin: center center;
+    animation: spin 4s ease-in-out 1;
+    animation-delay: 1.9s;
+  }
   
   @media only screen and (max-width: 600px) {
     header nav li {
@@ -158,5 +168,24 @@
     .hero {
       height: 200px;
     }
+  }
+
+  @keyframes spin {
+    0%{
+      transform: scale(.95);
+    }
+    25%{
+      transform: rotate(180deg) scale(.5);
+    }
+    50%{
+      transform: rotate(270deg) scale(.25);
+    }
+    75%{
+      transform: rotate(360deg) scale(.75);
+    }
+    100%{
+      transform: scale(1)
+    }
+    
   }
   

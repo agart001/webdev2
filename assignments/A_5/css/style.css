@@ -4,24 +4,6 @@
     box-sizing: border-box;
 }
 
-@font-face {
-    font-family: 'Earth Orbiter';
-    src: url('EarthOrbiter.woff2') format('woff2'),
-        url('EarthOrbiter.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Earth Orbiter Title';
-    src: url('EarthOrbiterTitle.woff2') format('woff2'),
-        url('EarthOrbiterTitle.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
 header{
     border: .1rem solid red;
     height: 20%;
@@ -84,6 +66,5 @@ section > button
 
 
 #hidden-1, #hidden-2,#hidden-3{
-    visibility: hidden;
     display: none;
 }

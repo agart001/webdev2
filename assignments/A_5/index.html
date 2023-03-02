@@ -47,14 +47,9 @@
     function toggle_vis(id)
     {
         var el = document.getElementById(id)
-        if(el.style.visibility == 'visible'){
-            el.style.visibility = 'hidden';
-            el.style.display = 'none';
-        }
-        else{
-            el.style.visibility = 'visible'
-            el.style.display = 'block';
-        }
+
+        $(el).toggle();
+
     }
 </script>
 

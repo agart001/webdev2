@@ -8,15 +8,54 @@
 </head>
 <body>
     <header>
-
+        <h1>Title</h1>
     </header>
     <main>
-        <figure class="responsive">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jmVEmefXZrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </figure>
+        <section>
+            <figure class="responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmVEmefXZrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </figure>
+            <button onclick="toggle_vis('hidden-1')"> &#9660</button>
+        </section>
+
+        <section id="hidden-1">
+            <figure class="responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmVEmefXZrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </figure>
+            <button onclick="toggle_vis('hidden-2')"> &#9660</button>
+        </section>
+
+        <section id="hidden-2">
+            <figure class="responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmVEmefXZrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </figure>
+            <button onclick="toggle_vis('hidden-3')"> &#9660</button>
+        </section>
+
+        <section id="hidden-3">
+            <figure class="responsive">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/jmVEmefXZrA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </figure>
+        </section>
     </main>
     <Footer>
 
     </Footer>
 </body>
+
+<script>
+    function toggle_vis(id)
+    {
+        var el = document.getElementById(id)
+        if(el.style.visibility == 'visible'){
+            el.style.visibility = 'hidden';
+            el.style.display = 'none';
+        }
+        else{
+            el.style.visibility = 'visible'
+            el.style.display = 'block';
+        }
+    }
+</script>
+
 </html>

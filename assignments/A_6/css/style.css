@@ -29,7 +29,8 @@ figure{
 }
 
 section{
-    margin: 1.5rem;
+    margin: 0 1.5rem;
+    height: 30%;
 }
 
 
@@ -48,4 +49,6 @@ footer > h1{
 section > p{
     font-size: 1.25rem;
     text-indent: 2rem;
+
+    margin-top: 3rem;
 }

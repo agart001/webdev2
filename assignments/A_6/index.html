@@ -13,21 +13,70 @@
     </header>
     <main>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt soluta laboriosam doloremque corporis quos accusamus eveniet sapiente cupiditate? Dolorum, excepturi sapiente velit minus culpa unde aperiam saepe. Cum, tenetur ut, maxime voluptatem corporis perspiciatis est quaerat in sed id explicabo? Dignissimos quibusdam consequuntur cumque consequatur perspiciatis. Dolorem quaerat sapiente esse.</p>
+            <p id="sec-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt soluta laboriosam doloremque corporis quos accusamus eveniet sapiente cupiditate? Dolorum, excepturi sapiente velit minus culpa unde aperiam saepe. Cum, tenetur ut, maxime voluptatem corporis perspiciatis est quaerat in sed id explicabo? Dignissimos quibusdam consequuntur cumque consequatur perspiciatis. Dolorem quaerat sapiente esse.</p>
         </section>
-        <figure style="background-image: url(img/6896957-skyrim-wallpaper.jpg);">
+        <figure id="img-1" style="background-image: url(img/6896957-skyrim-wallpaper.jpg);">
         </figure>
         <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt soluta laboriosam doloremque corporis quos accusamus eveniet sapiente cupiditate? Dolorum, excepturi sapiente velit minus culpa unde aperiam saepe. Cum, tenetur ut, maxime voluptatem corporis perspiciatis est quaerat in sed id explicabo? Dignissimos quibusdam consequuntur cumque consequatur perspiciatis. Dolorem quaerat sapiente esse.</p>
+            <p id="sec-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt soluta laboriosam doloremque corporis quos accusamus eveniet sapiente cupiditate? Dolorum, excepturi sapiente velit minus culpa unde aperiam saepe. Cum, tenetur ut, maxime voluptatem corporis perspiciatis est quaerat in sed id explicabo? Dignissimos quibusdam consequuntur cumque consequatur perspiciatis. Dolorem quaerat sapiente esse.</p>
         </section>
-        <figure style="background-image: url(img/Glazed-Donuts-SQ.png);">
+        <figure id="img-2" style="background-image: url(img/Glazed-Donuts-SQ.png);">
         </figure>
         <section>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati libero quibusdam quidem blanditiis consequuntur, dolor architecto sequi amet voluptates dolore! Deserunt vel officia unde, cum debitis sunt quia. Neque placeat nulla veritatis quaerat omnis voluptatem architecto eum hic, assumenda incidunt nemo, exercitationem voluptatum, aliquam ipsum doloremque praesentium nam iusto quibusdam.</p>
+            <p id="sec-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati libero quibusdam quidem blanditiis consequuntur, dolor architecto sequi amet voluptates dolore! Deserunt vel officia unde, cum debitis sunt quia. Neque placeat nulla veritatis quaerat omnis voluptatem architecto eum hic, assumenda incidunt nemo, exercitationem voluptatum, aliquam ipsum doloremque praesentium nam iusto quibusdam.</p>
         </section>
+        <figure id="img-3" style="background-image: url(img/Glazed-Donuts-SQ.png);">
+        </figure>
     </main>
     <footer>
         <h1>&copy; 2023 (not really)</h1>
     </footer>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+     $(document).ready(function(){
+        $("#sec-1").hide();
+        $("#sec-2").hide();
+
+        $(window).scroll(function(){
+            var win_p = $(window).scrollTop();
+
+            var img_1 = $("#img-1");
+            var img_2 = $("#img-2");
+
+            var p_0 = $("#sec-0").position().top + $("#sec-0").outerHeight(true);
+            var p_1 = img_1.position().top + img_1.outerHeight(true);
+            var p_2 = img_2.position().top + img_2.outerHeight(true);
+
+            if(win_p > p_0)
+            {
+                $("#sec-0").hide('slow', 'linear');
+            }
+            else{
+                $("#sec-0").show('fast', 'linear');
+            }
+
+            if(win_p > p_1)
+            {
+
+                $("#sec-1").show('fast', 'linear');
+            }
+            else{
+                $("#sec-1").hide('slow', 'linear');
+            }
+
+            if(win_p > p_2)
+            {
+                $("#sec-2").show('fast', 'linear');
+            }
+            else{
+                $("#sec-2").hide('slow', 'linear');
+            }
+
+        });
+     });
+</script>
+
 </html>

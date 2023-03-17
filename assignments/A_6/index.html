@@ -17,7 +17,7 @@
         </section>
         <figure id="img-1" style="background-image: url(img/6896957-skyrim-wallpaper.jpg);">
         </figure>
-        <section>
+        <section id="cont-1">
             <p id="sec-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt soluta laboriosam doloremque corporis quos accusamus eveniet sapiente cupiditate? Dolorum, excepturi sapiente velit minus culpa unde aperiam saepe. Cum, tenetur ut, maxime voluptatem corporis perspiciatis est quaerat in sed id explicabo? Dignissimos quibusdam consequuntur cumque consequatur perspiciatis. Dolorem quaerat sapiente esse.</p>
         </section>
         <figure id="img-2" style="background-image: url(img/Glazed-Donuts-SQ.png);">
@@ -60,10 +60,11 @@
 
             if(win_p > p_1)
             {
-
+                $("#cont-1").addClass('anim');
                 $("#sec-1").show('fast', 'linear');
             }
             else{
+                $("#cont-1").removeClass('anim');
                 $("#sec-1").hide('slow', 'linear');
             }
 

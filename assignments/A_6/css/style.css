@@ -33,7 +33,7 @@ figure{
 section{
     background-color: slategray;
     border: .3rem solid darkslategray;
-    height: 30%;
+    height: 40%;
 }
 
 
@@ -52,5 +52,26 @@ footer > h1{
 section > p{
     font-size: 1.25rem;
     text-indent: 2rem;
-    padding: 1.25rem;
+
+    margin: 0 auto;
+    padding: 2rem;
+
+    max-width: 50rem;
 }
+
+
+/*Tablet*/
+@media all and (min-width: 768px) {
+	
+	
+	
+	
+}
+
+/*Desktop*/
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} 

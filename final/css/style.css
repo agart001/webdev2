@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header button{
+    background-color: var(--uranian-blue);
+    height: 2rem;
+    width: 4rem;
+    border: .1rem solid black;
+}
+
+nav #drop{
+    overflow: hidden;
+}
+
+nav #drop-content
+{
+    display: none;
+    position: absolute;
+}
+
+nav #drop-content button
+{
+    border-top: none;
+
+    border-right: .1rem solid black;
+    border-left: .1rem solid black;
+    border-bottom: .1rem solid black;
+}
+
+nav #drop-content a{
+    float: none;
+    display: block;
+}
+
+nav #drop:hover #drop-content{
+    display: block;
+}
+
+nav #drop-content button:hover{
+    background-color: whitesmoke;
+}
+
+
+
+/*Tablet*/
+@media all and (min-width: 725px) {
+
+
+}
+
+/*Desktop*/
+@media all and (min-width: 1024px) {
+	
+	
+	
+	
+} 

@@ -117,10 +117,8 @@ nav #drop-content button:hover{
 }
 
 audio{
-    display: block;
     min-width: 400px;
     height: auto;
-    object-fit: inherit;
 }
 
 #colors{

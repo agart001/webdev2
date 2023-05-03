@@ -25,7 +25,7 @@
 
 #container{
     padding: var(--cont-height) var(--cont-width);
-    background-color: var(--snes-black);
+    background: radial-gradient(circle, var(--snes-violet) 25%, var(--snes-purple) 50%, var(--snes-black) 75%);
 }
 
 #separator{

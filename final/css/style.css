@@ -5,16 +5,24 @@
     --snes-white: #cec9cc;
     --snes-black: #211a21;
 
-    --cont-width: 1rem;
-    --cont-height: .5rem;
+    --cont-pad: 2rem;
 
     --border-width: .3rem;
     --border-radius: 25px;
-    --sect-el-margin: .75rem;
 
-    --but-bor-width: .15rem;
+    --sect-el-margin: .75rem;
+    --sect-el-fntsize: 1.15rem;
+
+    --but-bor-width: .2rem;
     --but-bor-radius: 15px;
-    --audio-width: 15rem;
+    --but-margin-H: 1rem;
+    --but-margin-W: .5rem;
+    --but-width: 6rem;
+    --but-height: 6rem;
+    --but-font-size: 1.1rem;
+
+    --audio-width: 18rem;
+    --img-len: 15rem;
 }
 
 *{
@@ -23,21 +31,20 @@
     box-sizing: border-box;
 }
 
-#container{
-    padding: var(--cont-height) var(--cont-width);
-    background: radial-gradient(circle, var(--snes-violet) 25%, var(--snes-purple) 50%, var(--snes-black) 75%);
-}
-
-#separator{
-    display: block;
-    width: var(--cont-width);
+body{
+    background-color: var(--snes-black);
 }
 
 header{
+    margin: var(--cont-pad);
+
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
+
     height: auto;
+
     text-align: center;
+
     display: flex;
     flex-flow: column;
     background-color: var(--snes-white);
@@ -57,19 +64,30 @@ header > section{
 
 
 main{
+    margin: 0 var(--cont-pad);
     height: auto;
     display: flex;
     flex-flow: row;
+    justify-content: center;
+    gap: calc(var(--cont-pad) / 2);
 }
 
 footer{
+    margin: var(--cont-pad);
+
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
+
     height: 20%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+a{
+    text-decoration: none;
 }
 
 
@@ -77,44 +95,58 @@ footer{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
+
     display: flex;
     flex-flow: column;
+
+    align-content: center;
     justify-content: flex-start;
-    align-items: center;
-    width: 30%;
+    gap: var(--but-margin-W);
+
+    width: calc(var(--but-width) + calc(var(--cont-pad) * 2));
+
+    max-height: 45rem;
 }
 
 #sidebar button{
-    margin: 1rem .5rem;
-    height: 3rem;
-    width: 6rem;
+    margin: var(--but-margin-H) var(--but-margin-W);
+
+    height: var(--but-height);
+    width: var(--but-width);
+
     border: var(--but-bor-width) solid var(--snes-purple);
     background-color: var(--snes-violet);
     border-radius: var(--but-bor-radius);
     color: var(--snes-purple);
-    font-size: .9rem;
+
+    text-align: center;
+    font-size: var(--but-font-size);
 }
 
-#sidebar #start-button{
-    margin-top: 4rem;
-}
-
-#sidebar #drop{
-    margin: 0;
-    overflow: hidden;
+#sidebar #nondrop{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 
-#sidebar #drop-content > a > .drop-button
+#sidebar #drop{ 
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    gap: var(--but-margin-W);
+}
+
+
+#sidebar .drop-button
 {
-    margin-top: .01rem;
+    margin: 0;
 }
 
 #sidebar #drop-content
 {
-    margin: 0;
     display: none;
-    position: absolute;
+    position: relative;
 }
 
 #sidebar #drop-content a{
@@ -123,11 +155,14 @@ footer{
 }
 
 #sidebar #drop:hover #drop-content{
-    display: block;
+    display: flex;
+    flex-flow: column;
+    gap: var(--but-margin-W);
 }
 
 #sidebar #drop-content button:hover{
-    background-color: whitesmoke;
+    color: var(--snes-violet);
+    background-color: var(--snes-grey);
 }
 
 #pagecontent{
@@ -137,7 +172,7 @@ footer{
     width: 70%;
 }
 
-#pagecontent section{
+#pagecontent > section{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
@@ -146,12 +181,69 @@ footer{
 
 #pagecontent section > h1{
     text-align: center;
+    padding: var(--sect-el-margin);
     margin: var(--sect-el-margin);
+    color: var(--snes-black);
+    background-color: var(--snes-violet);
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
 }
 
 #pagecontent section > p{
-    text-indent: var(--sect-el-margin);
+    text-indent: var(--sect-el-fntsize);
     margin: var(--sect-el-margin);
+    font-size: var(--sect-el-fntsize);
+}
+
+a > section{
+    background-color: var(--snes-violet);
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
+    
+    margin: var(--sect-el-margin);
+
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+
+a > section > div{
+    padding: var(--sect-el-margin);
+    margin: var(--sect-el-margin);
+
+    background-color: var(--snes-white);
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+a > section > div h1, p{
+    color: var(--snes-black);
+}
+
+
+a > section > figure{
+    margin: var(--sect-el-margin);
+
+    display: block;
+
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
+    
+    height: var(--img-len);
+    width: var(--img-len);
+}
+
+figure > img{
+    object-fit: fill;
+    border-radius: var(--but-bor-radius);
+    height: 100%;
+    width: 100%;
 }
 
 #interview ul{
@@ -164,6 +256,7 @@ footer{
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     color: var(--snes-black);
+    font-size: var(--sect-el-fntsize);
 }
 
 .interviewee{
@@ -220,8 +313,60 @@ audio::-webkit-media-controls-panel{
 
 /*Tablet*/
 @media all and (min-width: 725px) {
+    :root{
+        --cont-pad: 3rem;
+    
+        --border-width: .3rem;
+        --border-radius: 25px;
+    
+        --sect-el-margin: 1.5rem;
+        --sect-el-fntsize: 1.25rem;
+    
+        --but-bor-radius: 15px;
+        --but-margin-H: 2rem;
+        --but-margin-W: .25rem;
+        --but-width: 6rem;
+        --but-height: 4rem;
+        --but-font-size: 1rem;
+    
+        --audio-width: 35rem;
 
+        --img-len: 5rem;
+    }
 
+    #sidebar{
+        width: auto;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    #sidebar button{
+        font-size: .95rem;
+    }
+
+    #sidebar #nondrop{
+        flex-flow: row;
+    }
+
+    #sidebar #drop{
+        flex-flow: row;
+    }
+
+    #sidebar #drop:hover #drop-content{
+        flex-flow: row;
+    }
+
+    #pagecontent{
+        width: auto;
+    }
+
+    a > section{
+        flex-flow: row;
+    }
+
+    main{
+        flex-flow: column;
+    }
 }
 
 /*Desktop*/

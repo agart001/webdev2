@@ -5,7 +5,8 @@
     --snes-white: #cec9cc;
     --snes-black: #211a21;
 
-    --cont-pad: 2rem;
+    --cont-pad: .75rem;
+    --col-height: 75rem;
 
     --border-width: .3rem;
     --border-radius: 25px;
@@ -21,8 +22,8 @@
     --but-height: 6rem;
     --but-font-size: 1.1rem;
 
-    --audio-width: 18rem;
-    --img-len: 15rem;
+    --audio-width: 22rem;
+    --img-len: 8rem;
 }
 
 *{
@@ -47,35 +48,67 @@ header{
 
     display: flex;
     flex-flow: column;
-    background-color: var(--snes-white);
+    background-color: var(--snes-violet);
 }
 
-header > h1{
-    margin-top: 1rem;
+header > h1, h2, h3{
+    color: var(--snes-black);
+    margin: calc(var(--sect-el-margin) / 2) var(--sect-el-margin);
 }
 
 header > section{
-    margin: 1.5rem 2rem;
+    margin: var(--sect-el-margin);
+
     background-color: var(--snes-grey);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
-    padding: 1rem 2rem;
+
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header > section > figure{
+    margin: var(--sect-el-margin);
+    display: block;
+
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
+    
+    height: var(--img-len);
+    width: var(--img-len);
+}
+
+header > section > div{
+    margin: var(--sect-el-margin);
+
+    background-color: var(--snes-white);
+    border: var(--but-bor-width) solid var(--snes-purple);
+    border-radius: var(--but-bor-radius);
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
 }
 
 
 main{
     margin: 0 var(--cont-pad);
+
     height: auto;
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
+
     justify-content: center;
-    gap: calc(var(--cont-pad) / 2);
+    gap: var(--cont-pad);
 }
 
 footer{
     margin: var(--cont-pad);
 
-    background-color: var(--snes-white);
+    background-color: var(--snes-violet);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
 
@@ -90,6 +123,11 @@ a{
     text-decoration: none;
 }
 
+#column{
+    display: flex;
+    flex-flow: row;
+    gap: var(--cont-pad);
+}
 
 #sidebar{
     background-color: var(--snes-white);
@@ -99,18 +137,15 @@ a{
     display: flex;
     flex-flow: column;
 
-    align-content: center;
+    align-items: center;
     justify-content: flex-start;
-    gap: var(--but-margin-W);
+
+    gap: var(--but-margin-H);
 
     width: calc(var(--but-width) + calc(var(--cont-pad) * 2));
-
-    max-height: 45rem;
 }
 
-#sidebar button{
-    margin: var(--but-margin-H) var(--but-margin-W);
-
+button{
     height: var(--but-height);
     width: var(--but-width);
 
@@ -123,18 +158,24 @@ a{
     font-size: var(--but-font-size);
 }
 
+#sidebar button{
+    margin: 0 var(--but-margin-W);
+}
+
+#start-button{
+    margin-top: var(--but-margin-H);
+}
+
 #sidebar #nondrop{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+    border: .1rem solid yellow;
 }
 
 
 #sidebar #drop{ 
+    border: .1rem solid red;
     display: flex;
     flex-flow: column;
     align-items: center;
-    gap: var(--but-margin-W);
 }
 
 
@@ -147,6 +188,7 @@ a{
 {
     display: none;
     position: relative;
+    margin-bottom: var(--but-margin-H);
 }
 
 #sidebar #drop-content a{
@@ -157,7 +199,9 @@ a{
 #sidebar #drop:hover #drop-content{
     display: flex;
     flex-flow: column;
-    gap: var(--but-margin-W);
+
+    margin-top: var(--but-margin-H);
+    gap: var(--but-margin-H);
 }
 
 #sidebar #drop-content button:hover{
@@ -169,14 +213,25 @@ a{
     background-color: var(--snes-grey);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
-    width: 70%;
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
 }
 
 #pagecontent > section{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
-    margin: 1rem;
+    margin: var(--sect-el-margin) calc(var(--sect-el-margin) * 2);
+}
+
+#pagecontent > section:first-child{
+    margin-top: calc(var(--sect-el-margin) * 2);
+}
+
+#pagecontent > section:last-child{
+    margin-bottom: calc(var(--sect-el-margin) * 2);
 }
 
 #pagecontent section > h1{
@@ -190,9 +245,10 @@ a{
 }
 
 #pagecontent section > p{
+    font-size: var(--sect-el-fntsize);
+
     text-indent: var(--sect-el-fntsize);
     margin: var(--sect-el-margin);
-    font-size: var(--sect-el-fntsize);
 }
 
 a > section{
@@ -202,9 +258,8 @@ a > section{
     
     margin: var(--sect-el-margin);
 
-    height: auto;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
     align-items: center;
 }
 
@@ -220,10 +275,13 @@ a > section > div{
     display: flex;
     flex-flow: column;
     align-items: center;
+    text-align: center;
 }
 
 a > section > div h1, p{
     color: var(--snes-black);
+
+    font-size: var(--sect-el-fntsize);
 }
 
 
@@ -236,7 +294,7 @@ a > section > figure{
     border-radius: var(--but-bor-radius);
     
     height: var(--img-len);
-    width: var(--img-len);
+    width: calc(var(--img-len) * 2);
 }
 
 figure > img{
@@ -244,6 +302,10 @@ figure > img{
     border-radius: var(--but-bor-radius);
     height: 100%;
     width: 100%;
+}
+
+#interview{
+    display: none;
 }
 
 #interview ul{
@@ -263,19 +325,24 @@ figure > img{
     background-color: var(--snes-violet);
 }
 
-
-#recording figure{
+#recording{
     display: flex;
     flex-flow: column;
-    gap: 1rem;
-    margin: var(--sect-el-margin);
     align-items: center;
+}
+
+
+#recording button{
+    margin: var(--sect-el-margin);
+    width: var(--audio-width);
 }
 
 
 audio{
     margin: var(--sect-el-margin);
+
     width: var(--audio-width);
+    
     background-color: var(--snes-violet);
     border-radius: var(--but-bor-radius);
     border: var(--but-bor-width) solid var(--snes-purple);
@@ -362,10 +429,6 @@ audio::-webkit-media-controls-panel{
 
     a > section{
         flex-flow: row;
-    }
-
-    main{
-        flex-flow: column;
     }
 }
 

@@ -10,36 +10,48 @@
     <header>
         <h1>Final Project - Interview #2</h1>
         <section>
-            <h2>Jacob Nader</h2>
-            <h3>Undergraduate Animation Major</h3>
-            <h3>Columbia College Chicago</h3>
+            <figure>
+                <img src="img/student.png" alt="">
+            </figure>
+            <div>
+                <h2>Jacob Nader</h2>
+                <h3>Columbia College Chicago
+                    Undergraduate Animation Major
+                </h3>
+            </div>
         </section>
     </header>
     <main>
-        <nav id="sidebar">
-            <div id="nondrop">
+        <div id="column">
+            <nav id="sidebar">
                 <a id="start-button" href="index.html">
                     <button>Home</button>
                 </a>
                 <a href="index.html">
                     <button>Conclusion</button>
                 </a>
-            </div>
-            <div id="drop">
-                <button>Interviews &or;</button>
-                <div id="drop-content">
-                    <a href="int1.html">
-                        <button class="drop-button">Interview 1</button>
-                    </a>
-                    <a href="int2.html">
-                        <button class="drop-button">Interview 2</button>
-                    </a>
-                    <a href="int3.html">
-                        <button class="drop-button">Interview 3</button>
-                    </a>
+                <div id="drop">
+                    <button>Interviews &or;</button>
+                    <div id="drop-content">
+                        <a href="int1.html">
+                            <button class="drop-button">Interview 1</button>
+                        </a>
+                        <a href="int2.html">
+                            <button class="drop-button">Interview 2</button>
+                        </a>
+                        <a href="int3.html">
+                            <button class="drop-button">Interview 3</button>
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </nav>
+            </nav>
+            <section id="pagecontent">
+                <section id="takeaway">
+                    <h1>Take Away</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum blanditiis expedita assumenda ipsum, temporibus eos optio odit repellendus voluptatibus nam in voluptates id aliquid nostrum. Voluptatibus, doloribus molestias rerum ut, nobis laborum aperiam doloremque quo autem illo obcaecati illum nulla tenetur expedita dicta sapiente saepe, in hic esse? Facilis doloribus quam quis commodi, delectus error illum totam, autem incidunt consequatur magnam asperiores distinctio! Pariatur modi quam fugit suscipit, a quasi adipisci dolorem hic exercitationem sequi fuga officiis sint incidunt, nulla explicabo dolorum aut doloribus numquam iure non. Quam quisquam saepe, atque illum autem pariatur sint perspiciatis, explicabo sit odio sunt!</p>
+                </section>
+            </section>
+        </div>
         <section id="pagecontent">
             <section id="recording">
                 <figure>
@@ -47,10 +59,7 @@
                         <source src="docs/interviews/Interview_Nader_Full.mp3" type="audio/mp3">
                     </audio>
                 </figure>
-            </section>
-            <section id="takeaway">
-                <h1>Take Away</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum blanditiis expedita assumenda ipsum, temporibus eos optio odit repellendus voluptatibus nam in voluptates id aliquid nostrum. Voluptatibus, doloribus molestias rerum ut, nobis laborum aperiam doloremque quo autem illo obcaecati illum nulla tenetur expedita dicta sapiente saepe, in hic esse? Facilis doloribus quam quis commodi, delectus error illum totam, autem incidunt consequatur magnam asperiores distinctio! Pariatur modi quam fugit suscipit, a quasi adipisci dolorem hic exercitationem sequi fuga officiis sint incidunt, nulla explicabo dolorum aut doloribus numquam iure non. Quam quisquam saepe, atque illum autem pariatur sint perspiciatis, explicabo sit odio sunt!</p>
+                <button id="toggle">- Show Transcipt -</button>
             </section>
             <section id="interview">
                 <ul>
@@ -106,4 +115,20 @@
         <h1>&copy; 2023 (not really)</h1>
     </footer>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+     $(document).ready(function(){
+
+        $('#toggle').click(function(){
+            $(this).text(function(i, text){
+                return text === "- Hide Transcipt-" ? "- Show Transcipt -": "- Hide Transcipt -";
+            })
+
+            $('#interview').slideToggle('fast');
+        });       
+    });
+</script>
+
 </html>

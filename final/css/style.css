@@ -166,20 +166,16 @@ a{
     width: var(--dot-len);
 
     background-color: var(--snes-purple);
+    color: var(--snes-black);
 
-    text-indent: calc(var(--dot-len) / 5);
+    text-align: center;
+    display: table-cell;
+    vertical-align:middle;
 
     font-size: var(--dot-len);
     font-weight: bold;
 }
 
-#sidebar .bot-dots{
-    border: .1rem solid blueviolet;
-}
-
-#sidebar .top-dots{
-    border: .1rem solid blueviolet;
-}
 
 #sidebar{
     background-color: var(--snes-white);
@@ -288,6 +284,7 @@ button{
 
 #pagecontent section > p{
     font-size: var(--sect-el-fntsize);
+    line-height: calc(var(--sect-el-fntsize) * 1.5);
 
     text-indent: var(--sect-el-fntsize);
     margin: var(--sect-el-margin);
@@ -303,11 +300,13 @@ a > section{
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 
 a > section > div{
     height: var(--img-len);
+    width: 50%;
 
     padding: calc(var(--sect-el-margin) / 1.5);
     margin-right: var(--sect-el-margin);
@@ -320,16 +319,12 @@ a > section > div{
     flex-flow: column;
     align-items: center;
     text-align: center;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 
 a > section > div h1, p{
     color: var(--snes-black);
-    font-size: var(--sect-el-fntsize);
-}
-
-a > section > div h1{
-    margin-bottom: var(--sect-el-margin);
+    font-size: calc(var(--sect-el-fntsize) / 1.5);
 }
 
 a > section > figure{
@@ -361,9 +356,11 @@ figure > img{
 #interview ul > li{
     margin: var(--sect-el-margin);
     padding: var(--sect-el-margin);
+    
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     color: var(--snes-black);
+
     font-size: var(--sect-el-fntsize);
 }
 
@@ -378,7 +375,6 @@ figure > img{
 }
 
 #recording > figure{
-    border: .1rem solid red;
     width: 90%;
     margin: var(--sect-el-margin);
 }
@@ -437,7 +433,7 @@ audio::-webkit-media-controls-panel{
         --border-radius: 25px;
     
         --sect-el-margin: 1rem;
-        --sect-el-fntsize: 1.5rem;
+        --sect-el-fntsize: 1.3rem;
     
         --but-bor-radius: 15px;
         --but-margin-H: 2rem;

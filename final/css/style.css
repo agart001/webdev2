@@ -19,8 +19,8 @@
     --but-bor-radius: 15px;
     --but-margin-H: 1rem;
     --but-margin-W: .5rem;
-    --but-width: 6rem;
-    --but-height: 6rem;
+    --but-width: 8rem;
+    --but-height: 4rem;
     --but-font-size: 1.1rem;
 
     --audio-width: 20rem;
@@ -139,12 +139,12 @@ a{
 }
 
 #dots{
-
     display: flex;
     flex-flow: row;
     justify-content: space-between;
 
     width: 99%;
+    height: auto;
 }
 
 .top-dots{
@@ -176,19 +176,44 @@ a{
     font-weight: bold;
 }
 
+#sidebar #dots{
+    flex-flow: column;
+    width: auto;
+    height: 99%;
+}
+
+#sidebar .top-dots{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0;
+    margin-left: calc(var(--sect-el-margin) / 2);
+}
+
+#sidebar .bot-dots{
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: calc(var(--sect-el-margin) / 2);
+}
+
+#sidebar .dot{
+    margin: calc(var(--sect-el-margin) / 4) 0;
+}
+
 
 #sidebar{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
 
-    display: flex;
-    flex-flow: column;
+    display: inline-flex;
+    align-items: center;
     justify-content: space-between;
 
     gap: var(--but-margin-H);
 
-    width: calc(var(--but-width) + calc(var(--cont-pad) * 2));
+    width: auto;
+    height: calc(var(--but-height) + calc(var(--but-margin-H) * 2));
 }
 
 button{
@@ -202,10 +227,6 @@ button{
 
     text-align: center;
     font-size: var(--but-font-size);
-}
-
-#sidebar button{
-    margin: 0 var(--but-margin-W);
 }
 
 

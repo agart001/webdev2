@@ -5,8 +5,9 @@
     --snes-white: #cec9cc;
     --snes-black: #211a21;
 
-    --cont-pad: .75rem;
+    --cont-pad: 1rem;
     --col-height: 75rem;
+    --dot-len: 1.25rem;
 
     --border-width: .3rem;
     --border-radius: 25px;
@@ -22,7 +23,7 @@
     --but-height: 6rem;
     --but-font-size: 1.1rem;
 
-    --audio-width: 22rem;
+    --audio-width: 20rem;
     --img-len: 8rem;
 }
 
@@ -43,44 +44,51 @@ header{
     border-radius: var(--border-radius);
 
     height: auto;
-
-    text-align: center;
-
     display: flex;
     flex-flow: column;
+    align-items: center;
+
     background-color: var(--snes-violet);
 }
 
-header > h1, h2, h3{
+header > h1{
     color: var(--snes-black);
-    margin: calc(var(--sect-el-margin) / 2) var(--sect-el-margin);
+    margin: calc(var(--sect-el-margin) *2) 0 0 0;
+}
+
+header div > h1, h2, h3{
+    margin: 0 var(--sect-el-margin);
 }
 
 header > section{
-    margin: var(--sect-el-margin);
+    margin: calc(var(--sect-el-margin) * 2) 0;
 
     background-color: var(--snes-grey);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
 
+    width: 90%;
+
     display: flex;
     flex-flow: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 header > section > figure{
     margin: var(--sect-el-margin);
+    
     display: block;
 
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     
     height: var(--img-len);
-    width: var(--img-len);
 }
 
 header > section > div{
+    height: var(--img-len);
+
     margin: var(--sect-el-margin);
 
     background-color: var(--snes-white);
@@ -89,10 +97,11 @@ header > section > div{
 
     display: flex;
     flex-flow: column;
+
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
 }
-
 
 main{
     margin: 0 var(--cont-pad);
@@ -112,11 +121,11 @@ footer{
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
 
-    height: 20%;
-
+    height: auto;
     display: flex;
-    justify-content: center;
+    flex-flow: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 a{
@@ -129,6 +138,49 @@ a{
     gap: var(--cont-pad);
 }
 
+#dots{
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+
+    width: 99%;
+}
+
+.top-dots{
+    margin-bottom: 0;
+    margin-top: calc(var(--sect-el-margin) / 2);
+}
+
+.bot-dots{
+    margin-top: 0;
+    margin-bottom: calc(var(--sect-el-margin) / 2);
+}
+
+.dot{
+    margin: 0 calc(var(--sect-el-margin) / 4);
+
+    border-radius: 50%;
+
+    height: var(--dot-len);
+    width: var(--dot-len);
+
+    background-color: var(--snes-purple);
+
+    text-indent: calc(var(--dot-len) / 5);
+
+    font-size: var(--dot-len);
+    font-weight: bold;
+}
+
+#sidebar .bot-dots{
+    border: .1rem solid blueviolet;
+}
+
+#sidebar .top-dots{
+    border: .1rem solid blueviolet;
+}
+
 #sidebar{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
@@ -136,9 +188,7 @@ a{
 
     display: flex;
     flex-flow: column;
-
-    align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
 
     gap: var(--but-margin-H);
 
@@ -162,17 +212,8 @@ button{
     margin: 0 var(--but-margin-W);
 }
 
-#start-button{
-    margin-top: var(--but-margin-H);
-}
-
-#sidebar #nondrop{
-    border: .1rem solid yellow;
-}
-
 
 #sidebar #drop{ 
-    border: .1rem solid red;
     display: flex;
     flex-flow: column;
     align-items: center;
@@ -217,29 +258,30 @@ button{
     display: flex;
     flex-flow: column;
     align-items: center;
+    justify-content: space-between;
 }
 
 #pagecontent > section{
     background-color: var(--snes-white);
     border: var(--border-width) solid var(--snes-purple);
     border-radius: var(--border-radius);
-    margin: var(--sect-el-margin) calc(var(--sect-el-margin) * 2);
+
+    margin: var(--sect-el-margin) 0;
+
+    width: 90%;
 }
 
-#pagecontent > section:first-child{
-    margin-top: calc(var(--sect-el-margin) * 2);
-}
-
-#pagecontent > section:last-child{
-    margin-bottom: calc(var(--sect-el-margin) * 2);
-}
 
 #pagecontent section > h1{
+    font-size: calc(var(--sect-el-fntsize) * 1.25);
     text-align: center;
+
     padding: var(--sect-el-margin);
     margin: var(--sect-el-margin);
+
     color: var(--snes-black);
     background-color: var(--snes-violet);
+    
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
 }
@@ -265,8 +307,10 @@ a > section{
 
 
 a > section > div{
-    padding: var(--sect-el-margin);
-    margin: var(--sect-el-margin);
+    height: var(--img-len);
+
+    padding: calc(var(--sect-el-margin) / 1.5);
+    margin-right: var(--sect-el-margin);
 
     background-color: var(--snes-white);
     border: var(--but-bor-width) solid var(--snes-purple);
@@ -276,14 +320,17 @@ a > section > div{
     flex-flow: column;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 a > section > div h1, p{
     color: var(--snes-black);
-
     font-size: var(--sect-el-fntsize);
 }
 
+a > section > div h1{
+    margin-bottom: var(--sect-el-margin);
+}
 
 a > section > figure{
     margin: var(--sect-el-margin);
@@ -294,7 +341,6 @@ a > section > figure{
     border-radius: var(--but-bor-radius);
     
     height: var(--img-len);
-    width: calc(var(--img-len) * 2);
 }
 
 figure > img{
@@ -331,17 +377,21 @@ figure > img{
     align-items: center;
 }
 
+#recording > figure{
+    border: .1rem solid red;
+    width: 90%;
+    margin: var(--sect-el-margin);
+}
+
 
 #recording button{
     margin: var(--sect-el-margin);
-    width: var(--audio-width);
+    width: 90%;
 }
 
 
 audio{
-    margin: var(--sect-el-margin);
-
-    width: var(--audio-width);
+    width: 100%;
     
     background-color: var(--snes-violet);
     border-radius: var(--but-bor-radius);
@@ -381,13 +431,13 @@ audio::-webkit-media-controls-panel{
 /*Tablet*/
 @media all and (min-width: 725px) {
     :root{
-        --cont-pad: 3rem;
+        --cont-pad: 1.25rem;
     
         --border-width: .3rem;
         --border-radius: 25px;
     
-        --sect-el-margin: 1.5rem;
-        --sect-el-fntsize: 1.25rem;
+        --sect-el-margin: 1rem;
+        --sect-el-fntsize: 1.5rem;
     
         --but-bor-radius: 15px;
         --but-margin-H: 2rem;
@@ -401,27 +451,11 @@ audio::-webkit-media-controls-panel{
         --img-len: 5rem;
     }
 
-    #sidebar{
-        width: auto;
-        flex-flow: row;
-        justify-content: center;
-    }
 
     #sidebar button{
         font-size: .95rem;
     }
 
-    #sidebar #nondrop{
-        flex-flow: row;
-    }
-
-    #sidebar #drop{
-        flex-flow: row;
-    }
-
-    #sidebar #drop:hover #drop-content{
-        flex-flow: row;
-    }
 
     #pagecontent{
         width: auto;

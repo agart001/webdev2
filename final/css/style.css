@@ -5,7 +5,7 @@
     --snes-white: #cec9cc;
     --snes-black: #211a21;
 
-    --cont-pad: 1rem;
+    --cont-pad: .5rem;
     --col-height: 75rem;
     --dot-len: 1.25rem;
 
@@ -19,12 +19,12 @@
     --but-bor-radius: 15px;
     --but-margin-H: 1rem;
     --but-margin-W: .5rem;
-    --but-width: 8rem;
+    --but-width: 10rem;
     --but-height: 4rem;
     --but-font-size: 1.1rem;
 
     --audio-width: 20rem;
-    --img-len: 8rem;
+    --img-len: 6rem;
 }
 
 *{
@@ -35,6 +35,10 @@
 
 body{
     background-color: var(--snes-black);
+}
+
+h1, h2, h3, p{
+    color: var(--snes-black);
 }
 
 header{
@@ -82,12 +86,11 @@ header > section > figure{
 
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
-    
-    height: var(--img-len);
 }
 
 header > section > div{
     height: var(--img-len);
+    width: 90%;
 
     margin: var(--sect-el-margin);
 
@@ -226,9 +229,11 @@ button{
     color: var(--snes-purple);
 
     text-align: center;
-    font-size: var(--but-font-size);
 }
 
+#sidebar > button{
+    font-size: var(--but-font-size);
+}
 
 #sidebar #drop{ 
     display: flex;
@@ -311,26 +316,34 @@ button{
     margin: var(--sect-el-margin);
 }
 
+#pagecontent #cards{
+    height: 99%;
+    border-width: var(--but-bor-width);
+    display: flex;
+    flex-flow: column;
+    justify-content: flex-start;
+}
+
+#pagecontent #cards a:first-child > section{
+    margin-top: var(--sect-el-margin);
+}
+
 a > section{
     background-color: var(--snes-violet);
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     
-    margin: var(--sect-el-margin);
+    margin: calc(var(--sect-el-margin) / 2);
 
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: center;
-    justify-content: space-evenly;
 }
 
 
 a > section > div{
     height: var(--img-len);
-    width: 50%;
-
-    padding: calc(var(--sect-el-margin) / 1.5);
-    margin-right: var(--sect-el-margin);
+    margin: calc(var(--sect-el-margin) / 2);
 
     background-color: var(--snes-white);
     border: var(--but-bor-width) solid var(--snes-purple);
@@ -344,8 +357,16 @@ a > section > div{
 }
 
 a > section > div h1, p{
+    margin: calc(var(--sect-el-margin) / 4);
     color: var(--snes-black);
+}
+
+a > section > div h1{
     font-size: calc(var(--sect-el-fntsize) / 1.5);
+}
+
+a > section > div p{
+    font-size: calc(var(--sect-el-fntsize) / 2);
 }
 
 a > section > figure{
@@ -356,7 +377,7 @@ a > section > figure{
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     
-    height: var(--img-len);
+    width: var(--img-len);
 }
 
 figure > img{
@@ -448,38 +469,29 @@ audio::-webkit-media-controls-panel{
 /*Tablet*/
 @media all and (min-width: 725px) {
     :root{
-        --cont-pad: 1.25rem;
+        --cont-pad: 1rem;
     
         --border-width: .3rem;
         --border-radius: 25px;
     
-        --sect-el-margin: 1rem;
+        --sect-el-margin: 1.5rem;
         --sect-el-fntsize: 1.3rem;
     
         --but-bor-radius: 15px;
         --but-margin-H: 2rem;
         --but-margin-W: .25rem;
-        --but-width: 6rem;
+        --but-width: 15rem;
         --but-height: 4rem;
-        --but-font-size: 1rem;
+        --but-font-size: 5rem;
     
         --audio-width: 35rem;
 
-        --img-len: 5rem;
+        --img-len: 8rem;
     }
 
 
     #sidebar button{
         font-size: .95rem;
-    }
-
-
-    #pagecontent{
-        width: auto;
-    }
-
-    a > section{
-        flex-flow: row;
     }
 }
 

@@ -327,6 +327,9 @@ button{
 }
 
 #pagecontent #cards{
+    display: flex;
+    flex-flow: column;
+    justify-content: space-evenly;
     border-width: var(--but-bor-width);
 }
 
@@ -490,15 +493,17 @@ audio::-webkit-media-controls-panel{
     }
 
 
-    #sidebar button{
-        font-size: .95rem;
-    }
+    
 }
 
 /*Desktop*/
 @media all and (min-width: 1024px) {
+    #column #pagecontent:first-child{
+        height: auto;
+    }
 	
-	
-	
+    #pagecontent #cards{
+        height: 95%;
+    }
 	
 } 

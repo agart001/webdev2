@@ -89,15 +89,13 @@ header{
 
 header > h1{
     letter-spacing: .1rem;
+    font-size: calc(var(--sect-el-fntsize) * 2);
     margin: calc(var(--sect-el-margin) *2) 0 0 0;
 }
 
 header div > h2{
+    font-size: calc(var(--sect-el-fntsize) * 1.5);
     margin: calc(var(--sect-el-margin) / 4) 0;
-}
-
-header div > h3{
-    margin: 0 var(--sect-el-margin);
 }
 
 header div > h3:last-child{
@@ -275,41 +273,8 @@ button{
     font-size: var(--but-font-size);
 }
 
-#sidebar #drop{ 
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-}
-
-
-#sidebar .drop-button
-{
-    margin: 0;
-}
-
-#sidebar #drop-content
-{
-    display: none;
-    position: relative;
-    margin-bottom: var(--but-margin-H);
-}
-
-#sidebar #drop-content a{
-    float: none;
-    display: block;
-}
-
-#sidebar #drop:hover #drop-content{
-    display: flex;
-    flex-flow: column;
-
-    margin-top: var(--but-margin-H);
-    gap: var(--but-margin-H);
-}
-
-#sidebar #drop-content button:hover{
-    color: var(--snes-violet);
-    background-color: var(--snes-grey);
+#sidebar > a > button{
+    font-size: var(--but-font-size);
 }
 
 #pagecontent{
@@ -431,7 +396,7 @@ figure > img{
 }
 
 #interview ul > li{
-    margin: var(--sect-el-margin);
+    margin: calc(var(--sect-el-margin) / 2);
     padding: var(--sect-el-margin);
     
     border: var(--but-bor-width) solid var(--snes-purple);
@@ -503,20 +468,20 @@ audio::-webkit-media-controls-panel{
 /*Tablet*/
 @media all and (min-width: 725px) {
     :root{
-        --cont-pad: 1rem;
+        --cont-pad: .75rem;
     
         --border-width: .3rem;
         --border-radius: 25px;
     
-        --sect-el-margin: 1.5rem;
+        --sect-el-margin: 1.75rem;
         --sect-el-fntsize: 1.3rem;
     
         --but-bor-radius: 15px;
         --but-margin-H: 2rem;
         --but-margin-W: .25rem;
         --but-width: 15rem;
-        --but-height: 4rem;
-        --but-font-size: 5rem;
+        --but-height: 6rem;
+        --but-font-size: 2rem;
     
         --audio-width: 35rem;
 

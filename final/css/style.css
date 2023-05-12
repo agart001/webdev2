@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'ArcadeClassic';
+    src: url('fonts/ArcadeClassic.woff2') format('woff2'),
+        url('fonts/ArcadeClassic.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'VPPixel';
+    src: url('fonts/VPPixel-Simplified.woff2') format('woff2'),
+        url('fonts/VPPixel-Simplified.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root{
     --snes-violet: #b5b6e4;
     --snes-purple: #4f43ae;
@@ -21,7 +39,7 @@
     --but-margin-W: .5rem;
     --but-width: 10rem;
     --but-height: 4rem;
-    --but-font-size: 1.1rem;
+    --but-font-size: 1.5rem;
 
     --audio-width: 20rem;
     --img-len: 6rem;
@@ -37,8 +55,21 @@ body{
     background-color: var(--snes-black);
 }
 
-h1, h2, h3, p{
+h1, h2{
+    font-family: "ArcadeClassic";
+    letter-spacing: .05rem;
+}
+
+h3, p, li{
+    font-family: "VPPixel";
+}
+
+h1, h2, h3, p, li{
     color: var(--snes-black);
+}
+
+i{
+    color: var(--snes-purple);
 }
 
 header{
@@ -51,17 +82,26 @@ header{
     display: flex;
     flex-flow: column;
     align-items: center;
+    text-align: center;
 
     background-color: var(--snes-violet);
 }
 
 header > h1{
-    color: var(--snes-black);
+    letter-spacing: .1rem;
     margin: calc(var(--sect-el-margin) *2) 0 0 0;
 }
 
-header div > h1, h2, h3{
+header div > h2{
+    margin: calc(var(--sect-el-margin) / 4) 0;
+}
+
+header div > h3{
     margin: 0 var(--sect-el-margin);
+}
+
+header div > h3:last-child{
+    margin-bottom: calc(var(--sect-el-margin) / 4);
 }
 
 header > section{
@@ -80,7 +120,9 @@ header > section{
 }
 
 header > section > figure{
+    height: calc(var(--img-len) * 1.25);
     margin: var(--sect-el-margin);
+    margin-right: 0;
     
     display: block;
 
@@ -89,7 +131,7 @@ header > section > figure{
 }
 
 header > section > div{
-    height: var(--img-len);
+    height: calc(var(--img-len) * 1.25);
     width: 90%;
 
     margin: var(--sect-el-margin);
@@ -176,7 +218,7 @@ a{
     vertical-align:middle;
 
     font-size: var(--dot-len);
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 #sidebar #dots{
@@ -229,9 +271,7 @@ button{
     color: var(--snes-purple);
 
     text-align: center;
-}
-
-#sidebar > button{
+    font-family: "ArcadeClassic";
     font-size: var(--but-font-size);
 }
 
@@ -316,16 +356,12 @@ button{
     margin: var(--sect-el-margin);
 }
 
-#pagecontent #cards{
-    height: 99%;
-    border-width: var(--but-bor-width);
-    display: flex;
-    flex-flow: column;
-    justify-content: flex-start;
+#column #pagecontent:first-child{
+    height: 95%;
 }
 
-#pagecontent #cards a:first-child > section{
-    margin-top: var(--sect-el-margin);
+#pagecontent #cards{
+    border-width: var(--but-bor-width);
 }
 
 a > section{
@@ -333,7 +369,7 @@ a > section{
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
     
-    margin: calc(var(--sect-el-margin) / 2);
+    margin: var(--sect-el-margin) calc(var(--sect-el-margin) / 2);
 
     display: flex;
     flex-flow: column;
@@ -342,8 +378,7 @@ a > section{
 
 
 a > section > div{
-    height: var(--img-len);
-    margin: calc(var(--sect-el-margin) / 2);
+    margin: var(--sect-el-margin);
 
     background-color: var(--snes-white);
     border: var(--but-bor-width) solid var(--snes-purple);
@@ -362,11 +397,11 @@ a > section > div h1, p{
 }
 
 a > section > div h1{
-    font-size: calc(var(--sect-el-fntsize) / 1.5);
+    font-size: calc(var(--sect-el-fntsize));
 }
 
 a > section > div p{
-    font-size: calc(var(--sect-el-fntsize) / 2);
+    font-size: calc(var(--sect-el-fntsize) / 1.25);
 }
 
 a > section > figure{
@@ -401,7 +436,6 @@ figure > img{
     
     border: var(--but-bor-width) solid var(--snes-purple);
     border-radius: var(--but-bor-radius);
-    color: var(--snes-black);
 
     font-size: var(--sect-el-fntsize);
 }

@@ -29,37 +29,68 @@
         </div>
     </header>
     <main>
+        <nav id="sidebar">
+            <div id="dots" class="top-dots">
+                <div class="dot">+</div>
+                <div class="dot">+</div>
+            </div>
+            <a id="start-button" href="index.html">
+                <button>Home</button>
+            </a>
+            <a href="index.html">
+                <button>Conclusion</button>
+            </a>
+            <div id="dots" class="bot-dots">
+                <div class="dot">+</div>
+                <div class="dot">+</div>
+            </div>
+        </nav>
         <div id="column">
-            <nav id="sidebar">
+            <section id="pagecontent">
                 <div id="dots" class="top-dots">
                     <div class="dot">+</div>
                     <div class="dot">+</div>
                 </div>
-                <a id="start-button" href="index.html">
-                    <button>Home</button>
-                </a>
-                <a href="index.html">
-                    <button>Conclusion</button>
-                </a>
-                <div id="drop">
-                    <button>- Interviews -</button>
-                    <div id="drop-content">
-                        <a href="int1.html">
-                            <button class="drop-button">Interview 1</button>
-                        </a>
-                        <a href="int2.html">
-                            <button class="drop-button">Interview 2</button>
-                        </a>
-                        <a href="int3.html">
-                            <button class="drop-button">Interview 3</button>
-                        </a>
-                    </div>
-                </div>
+                <section id="cards">
+                    <a href="int1.html" class="a-section">
+                        <section> 
+                            <figure>
+                                <img src="img/prof.png" alt="">
+                            </figure>
+                            <div>
+                                <h1>David Antognoli</h1>
+                                <p>Assistant Professor of Game Design</p>
+                            </div>
+                        </section>
+                    </a>
+                    <a href="int2.html" class="a-section">
+                        <section> 
+                            <figure>
+                                <img src="img/student.png" alt="">
+                            </figure>
+                            <div>
+                                <h1>Jacob Nader</h1>
+                                <p>Undergraduate Animation Major</p>
+                            </div>
+                        </section>
+                    </a>
+                    <a href="int3.html" class="a-section">
+                        <section> 
+                            <figure>
+                                <img src="img/friend.png" alt="">
+                            </figure>
+                            <div>
+                                <h1>Justin Santiago</h1>
+                                <p>Life-long Gamer</p>
+                            </div>
+                        </section>
+                    </a>
+                </section>
                 <div id="dots" class="bot-dots">
                     <div class="dot">+</div>
                     <div class="dot">+</div>
                 </div>
-            </nav>
+            </section>
             <section id="pagecontent">
                 <div id="dots" class="top-dots">
                     <div class="dot">+</div>
@@ -67,7 +98,9 @@
                 </div>
                 <section id="takeaway">
                     <h1>Take Away</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum blanditiis expedita assumenda ipsum, temporibus eos optio odit repellendus voluptatibus nam in voluptates id aliquid nostrum. Voluptatibus, doloribus molestias rerum ut, nobis laborum aperiam doloremque quo autem illo obcaecati illum nulla tenetur expedita dicta sapiente saepe, in hic esse? Facilis doloribus quam quis commodi, delectus error illum totam, autem incidunt consequatur magnam asperiores distinctio! Pariatur modi quam fugit suscipit, a quasi adipisci dolorem hic exercitationem sequi fuga officiis sint incidunt, nulla explicabo dolorum aut doloribus numquam iure non. Quam quisquam saepe, atque illum autem pariatur sint perspiciatis, explicabo sit odio sunt!</p>
+                    <p>Professor Antognoli was truly a wealth of information when it came to understanding the stagnation of the video game genre. His experience working in the industry, in both an indie and corporate space, and his experience teaching game development, meant that he was able to give me very clear and technically detailed answers. I took many tidbits of knowledge from this interview to help me draw my conclusions, but here are the important ones: Corporate control has greatly diminished the creativity and intellectual integrity of the games industry. A game’s loops and gameplay are often decided by the hardware which runs them.</p>
+                    <p>Coporate control and consumerism has adversely affected many industries, the ever-present drive to increase profits has caused many, creative and intelligent, industry professionals to “toe the line” and avoid “pushing the envelope.” The games industry is no different. Professor Antognoli was quick to point out that, <i>“games are investments, people who fund them are trying to get a return on their investment. And so if you are an investor, you want a safe investment.”</i> It was something I knew, but also something I did not give enough credence to. Games, unlike shows, movies, or other forms of entertainment, have great staying power and can make more money from a consumer past their initial purpose. While they do have some risk associated with them, most games, regardless of their quality or content, can accrue a dedicated player base to exploit for money. The issue of games as investment is even more greatly exacerbated when you view it through the lens of IP or brand loyalty. Why bet on a up and coming studio with an original IP, when you can just invest in an established studio with popular IPs?</p>
+                    <p>Hardware, and software, is an extremely important aspect to consider when planning a game’s loops and gameplay. How fast, computationally and graphically, does the native system operate? What kind of input device does the system have? Are you going to release the game on multiple systems, or make it exclusive to one? These are all extremely important questions which play a direct role in the way you approach making a game and the kind of game you can make. For example: Do you intend to release your game on a console? Well, their controllers only have so many distinct inputs so you will have to limit player intractability and menus, you might even have to combine different gameplay loops into one larger, less technical and watered down, loop. While hardware may stifle a game with limitations, in some cases it can also provide opportunities for innovation and diversity. Professor Antognoli adeptly stated, <i>“when something like the Wii comes out, there's a lot of new ideas that can happen there, Right? Because it's just that hardware wise, interface wise is different. So I think whenever you have something like that, you'll feel sort of quick burst of new thought, like new ideas, but the core genres, they're mainly still the same.”</i> A game’s rules, loops, and interactivity, more often than not, is a symptom of its hardware.</p>
                 </section>
                 <div id="dots" class="bot-dots">
                     <div class="dot">+</div>
@@ -101,7 +134,7 @@
                     <li class="interviewer">Gotcha. What do you do for Microsoft?</li>
                     <li class="interviewee">I worked on training materials, or I guess you could say learning materials for Microsoft products that intersect with the Unity game engine. So specifically, things like Visual Studio, and Azure. So there'll be like, it would be like, let's make a tutorial about how to use Azure to authenticate in your unity game with Facebook, or let's use Azure to make a leaderboard for a game in unity, that kind of stuff. Also, just like the documentation for Visual Studio tools for unity, and I think actually did documentation for Visual Studio for Mac to back when that was brand new.</li>
                     <li class="interviewer">And what did you do at High Voltage?</li>
-                    <li class="interviewee">I was a game designer. So I worked on I started off the first game I worked on after college was Dora the Explorer store saves the snow princess. And then after that, I started when the conduit project was about halfway done, they decided to add multiplayer. And so I was kind of the main designer working on that. But we didn't really have a lot of flexibility because the game was mainly done. And then on kind of a two, I basically headed up like the sandbox gameplay design, I guess I'd say like so. Things like movement metrics and systems, weapons, enemy AI. And then also the, the, all the multiplayer stuff for that, including the UI and all that stuff. So it was a small team. So all the folks did a ton of things.</li>
+                    <li class="interviewee">I was a game designer. So I worked on I started off the first game I worked on after college was Dora the Explorer saves the snow princess. And then after that, I started when the conduit project was about halfway done, they decided to add multiplayer. And so I was kind of the main designer working on that. But we didn't really have a lot of flexibility because the game was mainly done. And then on kind of a two, I basically headed up like the sandbox gameplay design, I guess I'd say like so. Things like movement metrics and systems, weapons, enemy AI. And then also the, the, all the multiplayer stuff for that, including the UI and all that stuff. So it was a small team. So all the folks did a ton of things.</li>
                     <li class="interviewer">What are some of your favorite games currently, and why? I know, in adulthood, I'm personally feeling it now. There's not a lot of time to play games. But when I do get the time, there are definitely some ones that gravitate (to) more so.</li>
                     <li class="interviewee">Okay, so I really liked Half Life: Alyx I thought that was really good. Just because, you know, they, it was a pioneering VR project, I'd say. But it's also just really good for the same reasons that any game would be good in that genre, like good level design, good combat, etc. But they really kind of lead the way in a lot of the VR UX questions that have a lot of implications outside of the game industry.</li>
                     <li class="interviewee">I have recently I've been playing God of War, 2018, which I know there's a newer one, but this is just where I am. I thought that was really excellent. Because it was an interesting departure from all the other God of War stuff. And it really reminded me a lot of Resident Evil 4, which is one of my historic favorite games, which is not what I would have ever expected from a god of war game. But they really pulled off a really cool new direction for that franchise.</li>

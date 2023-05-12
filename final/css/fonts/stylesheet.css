@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'VP Pixel Simplified DEMO';
+    src: url('VPPixel-Simplified.woff2') format('woff2'),
+        url('VPPixel-Simplified.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

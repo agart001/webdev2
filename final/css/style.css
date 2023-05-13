@@ -501,7 +501,17 @@ audio::-webkit-media-controls-panel{
     #column #pagecontent:first-child{
         height: auto;
     }
+    
+    #pagecontent:last-child > section{
+        height: 95%;
+    }
 	
+    #pagecontent:last-child > section > p{
+        margin-top: var(--sect-el-margin);
+        margin-bottom: var(--sect-el-margin);
+        line-height: calc(var(--sect-el-fntsize) * 2);
+    }
+
     #pagecontent #cards{
         height: 95%;
     }
